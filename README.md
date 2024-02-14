@@ -1,3 +1,25 @@
+# base
+Base de inicio para cualquier sistema, con identificacion de usuarios.
+
+Desarrollado en LARAVEL v10
+Manejo de usuarios con BREEZE
+Control de Acceso mediante paquete SPATIE para los Roles y permisos.
+Panel de administracion mediante paqueteria de FILAMENT v3
+
+* Recordar cambiar en .env nombre de la bsae de datos, usuario y clave
+* Correr en la terminal "php artisan migrate:fresh --seed" que crea el usuario "Administrador" con el rol de "Administrador", mas los permisos CRUD de las tablas "users, roles y permissions"
+* Para el login:
+  * Usuario: sistemas@storage.cl
+  * Clave: 15561556
+* Como comando en la BD, esto para que se pueda conectar al sistema, correr el sigueinte comando INSERT:
+  - INSERT INTO model_has_roles (role_id, model_type , model_id) VALUES (1, "App\\Models\\User", 1);
+  - Este insert asigna al usuario Administrador el rol de Administrador, sin esta asignacion el login no mostrara NADA.
+* En la terminal ejecurar "php artisan serve"
+* URL de coneccion: "http://localhost:8000/admin"
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
